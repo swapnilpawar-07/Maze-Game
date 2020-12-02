@@ -41,24 +41,24 @@ void output(int x, int y, char *string)
 {
       int len, i;
 
-           glRasterPos2f(x,y);
-           len=(int) strlen(string);
-           for (i = 0; i < len; i++)
-			{
+       glRasterPos2f(x,y);
+       len=(int) strlen(string);
+       for (i = 0; i < len; i++)
+	{
              glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,string[i]);
-			}
+	}
 }
 
 void drawstring(int x, int y, char *string,void *font)
 {
       int len, i;
 
-           glRasterPos2f(x,y);
-           len=(int) strlen(string);
-           for (i = 0; i < len; i++)
-			{
+      glRasterPos2f(x,y);
+      len=(int) strlen(string);
+      for (i = 0; i < len; i++)
+	{
              glutBitmapCharacter(font,string[i]);
-			}
+	}
 }
 
  void frontscreen(void)
@@ -67,9 +67,9 @@ void drawstring(int x, int y, char *string,void *font)
 	glClear(GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
 	glColor3f(1,1,1);
-  drawstring(120,5," PRESS ENTER TO GO TO NEXT SCREEN",GLUT_BITMAP_HELVETICA_18);
+        drawstring(120,5," PRESS ENTER TO GO TO NEXT SCREEN",GLUT_BITMAP_HELVETICA_18);
 	drawstring(-45,5,"Maximize Window for better view",GLUT_BITMAP_HELVETICA_12);
-  glColor3f(0.0,0.0,1.0);
+        glColor3f(0.0,0.0,1.0);
 	output(65,160," K.K.W.I.E.E.R");
 	glColor3f(1,1,1);
 	output(5,150,"DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING");
@@ -95,55 +95,55 @@ void drawstring(int x, int y, char *string,void *font)
 	glColor3f(0.0,1.0,0.0);
 	output(15,100,"YOU HAVE SUCCEEDED IN SOLVING THE MAZE");
 	output(35,60,"* PRESS ESC TO GO TO MAIN MENU");
-  output(35,45,"* PRESS 1 TO RESTART THE GAME");
+        output(35,45,"* PRESS 1 TO RESTART THE GAME");
 	glFlush();
  }
 void startscreen()
 {
 
-glClear(GL_COLOR_BUFFER_BIT);
-glColor3f(0.0,1.0,0.0);
-output(58,140,"!!! W E L C O M E !!!");
-output(75,130,"TO THE");
-output(61,120,"M A Z E   G A M E");
-glColor3f(1.0,1.0,0.0);
-output(60,80,"1. NEW GAME");
-output(60,65,"2. HELP");
-output(60,50,"3. QUIT");
-glFlush();
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(0.0,1.0,0.0);
+	output(58,140,"!!! W E L C O M E !!!");
+	output(75,130,"TO THE");
+	output(61,120,"M A Z E   G A M E");
+	glColor3f(1.0,1.0,0.0);
+	output(60,80,"1. NEW GAME");
+	output(60,65,"2. HELP");
+	output(60,50,"3. QUIT");
+	glFlush();
 }
 
 void instructions()
 {
-  glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(1.0,1.0,0.0);
-  output(-25,140,"INSTRUCTIONS:");
-	glBegin(GL_LINES);
-	glVertex2f(-25,138);
-	glVertex2f(20,138);
-	glEnd();
-	glColor3f(0,1,0);
-  output(-25,120,"* USE THE ARROW KEYS TO MOVE THE OBJECT");
-  output(-25,110,"* FIND THE WAY TO MOVE INTO THE MAZE AND GET OUT");
-  output(-25,100,"* YOU WILL GET 80 SEC TO SOLVE THE MAZE");
-  output(-25,90,"* GREEN COLOURED POINT INDICATE THE POINT FROM WHERE YOU HAVE TO START");
-  output(-25,80,"* RED COLOURED POINT INDICATE THE POINT WHERE YOU HAVE TO REACH");
-  output(-25,70,"* AS YOU HAVE LIMITED TIME YOU NEED TO HURRY AND SOLVE THE MAZE IN LIMITED TIME");
-  output(-25,60,"* PRESS ESC TO GO TO MAIN MENU");
-   glFlush();
+          glClear(GL_COLOR_BUFFER_BIT);
+	  glColor3f(1.0,1.0,0.0);
+          output(-25,140,"INSTRUCTIONS:");
+	  glBegin(GL_LINES);
+	  glVertex2f(-25,138);
+	  glVertex2f(20,138);
+	  glEnd();
+	  glColor3f(0,1,0);
+	  output(-25,120,"* USE THE ARROW KEYS TO MOVE THE OBJECT");
+	  output(-25,110,"* FIND THE WAY TO MOVE INTO THE MAZE AND GET OUT");
+	  output(-25,100,"* YOU WILL GET 80 SEC TO SOLVE THE MAZE");
+	  output(-25,90,"* GREEN COLOURED POINT INDICATE THE POINT FROM WHERE YOU HAVE TO START");
+	  output(-25,80,"* RED COLOURED POINT INDICATE THE POINT WHERE YOU HAVE TO REACH");
+	  output(-25,70,"* AS YOU HAVE LIMITED TIME YOU NEED TO HURRY AND SOLVE THE MAZE IN LIMITED TIME");
+	  output(-25,60,"* PRESS ESC TO GO TO MAIN MENU");
+	  glFlush();
 }
 
 void timeover()
 {
- glClear(GL_COLOR_BUFFER_BIT);
- glColor3f(1,0,1.0);
- output(64,115,"!!! TIMEOVER !!!");
- glColor3f(0,1,0);
- output(50,100,"YOU HAVE LOST THE GAME");
- output(50,90,"BETTER LUCK NEXT TIME !!!");
- output(40,40,"* PRESS ESC TO GO TO MAIN MENU");
- output(40,30,"* PRESS 1 TO RESTART THE GAME");
- glFlush();
+	 glClear(GL_COLOR_BUFFER_BIT);
+	 glColor3f(1,0,1.0);
+	 output(64,115,"!!! TIMEOVER !!!");
+	 glColor3f(0,1,0);
+	 output(50,100,"YOU HAVE LOST THE GAME");
+	 output(50,90,"BETTER LUCK NEXT TIME !!!");
+	 output(40,40,"* PRESS ESC TO GO TO MAIN MENU");
+	 output(40,30,"* PRESS 1 TO RESTART THE GAME");
+	 glFlush();
 }
 void delay(int milliseconds)
 {
@@ -160,12 +160,12 @@ void demo_menu(int id)
 	switch(id)
 	{
 	case 1:
-		   df=2;
-		   instructions();
+		df=2;
+		instructions();
 
-		    break;
+		break;
 	case 2:
-		    exit(0);
+		exit(0);
 	case 3:
 		   
 	  
@@ -207,12 +207,12 @@ void idle()
 void wall(GLfloat x1,GLfloat y1,GLfloat x2,GLfloat y2,GLfloat x3,GLfloat y3,GLfloat x4,GLfloat y4)
 {
 
-  glBegin(GL_POLYGON);
+        glBegin(GL_POLYGON);
 	glVertex3f(x1,y1,0);
 	glVertex3f(x2,y2,0);
 	glVertex3f(x3,y3,0);
 	glVertex3f(x4,y4,0);
-  glEnd();
+        glEnd();
 
 }
 
@@ -236,7 +236,7 @@ void SpecialKey(int key, int x, int y)
 		if(!((px>=0 && px<=12) && (py>=15 && py<=22)))
 		if(!((px>=42 && px<=52) && (py>=25 && py<=32)))
 		if(!((px>=18 && px<=42) && (py>=5 && py<=12)))
-	  if(!((px>=0 && px<=8) && (py>=155 && py<=162)))
+	        if(!((px>=0 && px<=8) && (py>=155 && py<=162)))
 		if(!((px>=0 && px<=72) && (py>=165 && py<=172)))
 		if(!((px>=18 && px<=62) && (py>=155 && py<=162)))
 		if(!((px>=48 && px<=52) && (py>=125 && py<=158)))
@@ -350,9 +350,9 @@ void SpecialKey(int key, int x, int y)
 	case GLUT_KEY_DOWN:
 
 	flag=0;
-	  if(py>5)
-	  if(!((px>=0 && px<=8) && (py>=158 && py<=165)))
-	  if(!((px>=8 && px<=12) && (py>=148 && py<=165)))
+	        if(py>5)
+	        if(!((px>=0 && px<=8) && (py>=158 && py<=165)))
+	        if(!((px>=8 && px<=12) && (py>=148 && py<=165)))
 		if(!((px>=0 && px<=72) && (py>=168 && py<=175)))
 		if(!((px>=18 && px<=62) && (py>=158 && py<=165)))
 		if(!((px>=18 && px<=48) && (py>=148 && py<=155)))
@@ -367,7 +367,7 @@ void SpecialKey(int key, int x, int y)
 		if(!((px>=68 && px<=72) && (py>=158 && py<=175)))
 		if(!((px>=78 && px<=122) && (py>=158 && py<=165)))
 	if(!((px>=78 && px<=102) && (py>=168 && py<=175)))
-	  if(!((px>=148 && px<=180) && (py>=168 && py<=175)))
+	        if(!((px>=148 && px<=180) && (py>=168 && py<=175)))
 		if(!((px>=148 && px<=172) && (py>=158 && py<=165)))
 		if(!((px>=148 && px<=172) && (py>=168 && py<=175)))
 		if(!((px>=148 && px<=172) && (py>=98 && py<=105)))
@@ -478,9 +478,9 @@ void SpecialKey(int key, int x, int y)
 
 	case GLUT_KEY_LEFT:
 		flag=0;
-	    if(px>0)
-	    if(!((px>=8 && px<=15) && (py>=148 && py<=162)))
-	    if(!((px>=68 && px<=75) && (py>=158 && py<=168)))
+	        if(px>0)
+	        if(!((px>=8 && px<=15) && (py>=148 && py<=162)))
+	        if(!((px>=68 && px<=75) && (py>=158 && py<=168)))
 		if(!((px>=138 && px<=155) && (py>=68 && py<=72)))
 		if(!((px>=18 && px<=25) && (py>=162 && py<=168)))
 		if(!((px>=18 && px<=65) && (py>=58 && py<=62)))
@@ -496,7 +496,7 @@ void SpecialKey(int key, int x, int y)
 		if(!((px>=128 && px<=165) && (py>=128 && py<=132)))
 		if(!((px>=68 && px<=75) && (py>=158 && py<=172)))
 		if(!((px>=78 && px<=125) && (py>=158 && py<=162)))
-	  if(!((px>=98 && px<=105) && (py>=162 && py<=172)))
+	        if(!((px>=98 && px<=105) && (py>=162 && py<=172)))
 		if(!((px>=78 && px<=105) && (py>=168 && py<=172)))
 		if(!((px>=108 && px<=145) && (py>=168 && py<=172)))
 		if(!((px>=148 && px<=180) && (py>=168 && py<=172)))
@@ -543,7 +543,7 @@ void SpecialKey(int key, int x, int y)
 		if(!((px>=78 && px<=85) && (py>=68 && py<=112)))
 		if(!((px>=68 && px<=75) && (py>=72 && py<=102)))
 		if(!((px>=62 && px<=75) && (py>=68 && py<=72)))
-	  if(!((px>=28 && px<=35) && (py>=108 && py<=132)))
+	        if(!((px>=28 && px<=35) && (py>=108 && py<=132)))
 		if(!((px>=88 && px<=95) && (py>=62 && py<=72)))
 		if(!((px>=62 && px<=95) && (py>=58 && py<=62)))
 		if(!((px>=68 && px<=75) && (py>=48 && py<=62)))
@@ -605,10 +605,10 @@ void SpecialKey(int key, int x, int y)
 		break;
 	case GLUT_KEY_RIGHT:
 		flag=0;
-	    if(px<175)
-	    if(!((px>=115 && px<=122) && (py>=98 && py<=162)))
-	    if(!((px>=5 && px<=12) && (py>=148 && py<=162)))
-	    if(!((px>=65 && px<=72) && (py>=158 && py<=168)))
+	        if(px<175)
+	        if(!((px>=115 && px<=122) && (py>=98 && py<=162)))
+	        if(!((px>=5 && px<=12) && (py>=148 && py<=162)))
+	        if(!((px>=65 && px<=72) && (py>=158 && py<=168)))
 		if(!((px>=15 && px<=22) && (py>=162 && py<=168)))
 		if(!((px>=45 && px<=52) && (py>=128 && py<=158)))
 		if(!((px>=15 && px<=22) && (py>=138 && py<=152)))
@@ -622,7 +622,7 @@ void SpecialKey(int key, int x, int y)
 		if(!((px>=125 && px<=162) && (py>=128 && py<=132)))
 		if(!((px>=65 && px<=72) && (py>=158 && py<=172)))
 		if(!((px>=75 && px<=122) && (py>=158 && py<=162)))
-    if(!((px>=95 && px<=102) && (py>=162 && py<=172)))
+    		if(!((px>=95 && px<=102) && (py>=162 && py<=172)))
 		if(!((px>=75 && px<=102) && (py>=168 && py<=172)))
 		if(!((px>=145 && px<=180) && (py>=168 && py<=172)))
 		if(!((px>=145 && px<=152) && (py>=132 && py<=162)))
@@ -738,26 +738,26 @@ else  if(df==0)
       startscreen();
     else if(df==1)
      {
-    glColor3f(1.0,1.0,1.0);
-		output(-27,172,"START");
-		output(-27,163,"END");
-		glColor3f(0.0,1.0,0.0);
-		output(190,90,"TIME REMAINING: ");
-		glColor3f(1,0,1.0);
-		drawstring(190,70,"HURRY UP",GLUT_BITMAP_HELVETICA_18);
-		glColor3f(1,0,1.0);
-	  drawstring(190,80,"Time is running out",GLUT_BITMAP_HELVETICA_18);
-		glColor3f(0,1,0);
-		sprintf(t,"%d",80-count);
-    output(245,90,t);
-    glutPostRedisplay();
-		point();
-		point1();
-		point2();
-		//line();
-    glColor3f(1.0,1.0,0.0);
-		wall(-4,-4,0,-4,0,162,-4,162);
-	  wall(-4,178,-4,184,184,184,184,178);
+    	glColor3f(1.0,1.0,1.0);
+	output(-27,172,"START");
+	output(-27,163,"END");
+	glColor3f(0.0,1.0,0.0);
+	output(190,90,"TIME REMAINING: ");
+	glColor3f(1,0,1.0);
+	drawstring(190,70,"HURRY UP",GLUT_BITMAP_HELVETICA_18);
+	glColor3f(1,0,1.0);
+	drawstring(190,80,"Time is running out",GLUT_BITMAP_HELVETICA_18);
+	glColor3f(0,1,0);
+	sprintf(t,"%d",80-count);
+        output(245,90,t);
+        glutPostRedisplay();
+	point();
+	point1();
+	point2();
+	//line();
+        glColor3f(1.0,1.0,0.0);
+	        wall(-4,-4,0,-4,0,162,-4,162);
+	        wall(-4,178,-4,184,184,184,184,178);
 		wall(180,178,184,178,184,-4,180,-4);
 		wall(180,0,180,-4,-4,-4,0,0);
 		wall(18,8,42,8,42,12,18,12);
@@ -780,7 +780,7 @@ else  if(df==0)
 		wall(88,12,88,28,92,28,92,12);
 		wall(78,28,78,32,102,32,102,28);
 		wall(18,18,18,32,22,32,22,18);
-    wall(22,18,22,22,32,22,32,18);
+    		wall(22,18,22,22,32,22,32,18);
 		wall(28,22,32,22,32,42,28,42);
 		wall(32,38,32,42,72,42,72,38);
 		wall(68,38,68,28,72,28,72,38);
@@ -829,11 +829,11 @@ else  if(df==0)
 		wall(72,102,72,98,78,98,78,102);
 		wall(78,68,78,112,82,112,82,68);
 		wall(82,82,82,78,102,78,102,82);
-	  wall(78,108,78,112,48,112,48,108);
+	  	wall(78,108,78,112,48,112,48,108);
 		wall(48,112,48,118,52,118,52,112);
 		wall(38,122,38,118,102,118,102,122);
 		wall(98,108,112,108,112,112,98,112);
-    wall(8,88,12,88,12,112,8,112);
+    		wall(8,88,12,88,12,112,8,112);
 		wall(12,112,12,108,22,108,22,112);
 		wall(22,112,22,122,18,122,18,112);
 		wall(22,122,22,118,0,118,0,122);
@@ -869,7 +869,7 @@ else  if(df==0)
 		wall(168,162,168,122,172,122,172,162);
 		wall(168,142,168,138,158,138,158,142);
 		wall(168,152,168,148,158,148,158,152);
-    wall(148,102,148,98,172,98,172,102);
+    		wall(148,102,148,98,172,98,172,102);
 		wall(-4,172,-4,168,72,168,72,172);
 		wall(172,162,172,158,148,158,148,162);
 		wall(152,162,152,132,148,132,148,162);
@@ -884,13 +884,13 @@ else  if(df==0)
 		wall(142,172,142,168,108,168,108,172);
 		wall(142,138,142,162,138,162,138,138);
 		wall(138,158,138,162,132,162,132,158);
-	  wall(118,142,118,138,88,138,88,142);
+	  	wall(118,142,118,138,88,138,88,142);
 		wall(112,152,112,148,68,148,68,152);
 		wall(72,148,72,132,68,132,68,148);
 		wall(82,142,82,138,72,138,72,142);
 		wall(42,122,42,142,38,142,38,122);
 		wall(38,142,38,138,18,138,18,142);
-	  wall(22,142,22,148,18,148,18,142);
+	 	wall(22,142,22,148,18,148,18,142);
 		wall(18,152,18,148,48,148,48,152);
 		wall(48,128,52,128,52,158,48,158);
 		wall(62,162,62,158,18,158,18,162);
